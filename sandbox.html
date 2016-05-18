@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+    <title>Snap Sandbox</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!--order is important here-->
+    <script src="snap.svg.js"></script>
+    <script src="snap.svg.zpd.js"></script>
+
+    <style>
+        h4 {
+            display: inline-block;
+        }
+
+        input[type='checkbox'] {
+            margin-right: 20px;
+        }
+
+        .margBottom20 {
+            margin-bottom: 20px;
+        }
+
+        .margRight20 {
+            margin-right: 20px;
+        }
+        .clicked {
+            fill: #00ffff;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Snap.svg (0.4.1) and Snap.svg.zpd grid sandbox</h1>
+
+    <div>
+        <h4>Live snapping: </h4>
+        <input id="live" type="checkbox" />
+
+        <h4>Lock x axis movements:</h4>
+        <input id="lockX" type="checkbox" />
+
+        <h4>Lock y axis movements:</h4>
+        <input id="lockY" type="checkbox" />
+    </div>
+
+    <div>
+        <h4 class="margRight20">Offsets (pixels)</h4>
+        X:<input id="offsetX" type="number" class="margRight20" />
+        Y:<input id="offsetY" type="number" class="margRight20" />
+    </div>
+
+    <div class="margBottom20">
+        <button id="initialize" class="margRight20">Configure grid with current settings</button>
+    </div>
+
+    <svg id="svg" style="height: 500px; width: 100%;"></svg>
+	
+	<script src="sandbox.js"></script>
+    <script>
+        $(function () {
+            sandboxTest.sandboxInit();
+        });
+    </script>
+
+</body>
+</html>
